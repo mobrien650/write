@@ -1,25 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import styled from 'styled-components';
+
+import Navigation from 'components/Navigation'
+
+import HomePage from 'pages/ui/HomePage'
+import StoryPage from 'pages/ui/StoryPage'
+
+import { COLORS } from 'styles/color';
+import { SPACING_DIMEN } from 'styles/dimen'
+
+const Wrapper = styled.div`
+  padding-left: ${SPACING_DIMEN.LARGE_PLUS};
+  padding-right: ${SPACING_DIMEN.LARGE_PLUS};
+`
+
+const Content = styled.div`
+  background: ${COLORS.WHITE};
+  max-width: 1000px;
+  min-width: 735px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-shadow: 2px 0px #AAAAAA;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Wrapper>
+         <Content>
+            <Navigation />
+            <Switch>
+              <Route path="/" component={HomePage} exact/>
+              <Route path="/story/:name" component={StoryPage}/>
+            </Switch>
+          </Content>
+        </Wrapper>
+    </Router>
   );
 }
 
