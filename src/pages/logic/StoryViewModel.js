@@ -1,6 +1,6 @@
 import BaseViewModel from './BaseViewModel'
 
-import StoryCache from '../../cache/StoryCache'
+import StoryCache from 'cache/StoryCache'
 
 class StoryState {
     story = null

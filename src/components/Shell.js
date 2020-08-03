@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from './Navigation';
-import Aside from './Aside';
+import Navigation from 'components/Navigation';
+import Aside from 'components/Aside';
 
 export default (props) => {
     return (

@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components'
 import ReactMarkdown from 'react-markdown'
 
+import BasePage from 'pages/ui/BasePage';
+
+import StoryViewModel from 'pages/logic/StoryViewModel'
+
 import { SPACING_DIMEN } from 'styles/dimen'
-
-import BasePage from './BasePage';
-
-import StoryViewModel from '../logic/StoryViewModel'
 
 const Wrapper = styled.div`
     margin-left: ${SPACING_DIMEN.LARGE_PLUS};

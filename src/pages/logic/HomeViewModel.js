@@ -1,9 +1,7 @@
-import BaseViewModel from './BaseViewModel'
-
-import StoryCache from '../../cache/StoryCache'
+import BaseViewModel from 'pages/logic/BaseViewModel'
 
 class HomeState {
-    storyList = []
+
 }
 
 export default class HomeViewModel extends BaseViewModel {
@@ -11,12 +9,7 @@ export default class HomeViewModel extends BaseViewModel {
         return new HomeState()
     }
 
-    // QUESTION: Should new state do the set state call, or allow for processing?
     start() {        
-        const newState = this.newState({
-            storyList: StoryCache.getStoryList()
-        }) 
-        
-        this.setState(newState)
+        // No - Op
     }
 }
