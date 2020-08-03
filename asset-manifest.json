@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/write/static/css/main.6e78ac8b.chunk.css",
-    "main.js": "/write/static/js/main.3a26ff54.chunk.js",
-    "main.js.map": "/write/static/js/main.3a26ff54.chunk.js.map",
-    "runtime-main.js": "/write/static/js/runtime-main.84975937.js",
-    "runtime-main.js.map": "/write/static/js/runtime-main.84975937.js.map",
-    "static/js/2.f1f9e5f2.chunk.js": "/write/static/js/2.f1f9e5f2.chunk.js",
-    "static/js/2.f1f9e5f2.chunk.js.map": "/write/static/js/2.f1f9e5f2.chunk.js.map",
-    "index.html": "/write/index.html",
-    "precache-manifest.3e80205d4891a3726eb4d72e99c1f5ab.js": "/write/precache-manifest.3e80205d4891a3726eb4d72e99c1f5ab.js",
-    "service-worker.js": "/write/service-worker.js",
-    "static/css/main.6e78ac8b.chunk.css.map": "/write/static/css/main.6e78ac8b.chunk.css.map",
-    "static/js/2.f1f9e5f2.chunk.js.LICENSE.txt": "/write/static/js/2.f1f9e5f2.chunk.js.LICENSE.txt",
-    "static/media/test1.md": "/write/static/media/test1.f63223c4.md",
-    "static/media/test2.md": "/write/static/media/test2.b93d4c5b.md",
-    "static/media/test3.md": "/write/static/media/test3.3ba1718e.md",
-    "static/media/test4.md": "/write/static/media/test4.58d238dd.md"
+    "main.css": "/static/css/main.6e78ac8b.chunk.css",
+    "main.js": "/static/js/main.3a26ff54.chunk.js",
+    "main.js.map": "/static/js/main.3a26ff54.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.47183366.js",
+    "runtime-main.js.map": "/static/js/runtime-main.47183366.js.map",
+    "static/js/2.54a43ac4.chunk.js": "/static/js/2.54a43ac4.chunk.js",
+    "static/js/2.54a43ac4.chunk.js.map": "/static/js/2.54a43ac4.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.17afcca2384891621f54b26f9197002e.js": "/precache-manifest.17afcca2384891621f54b26f9197002e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.6e78ac8b.chunk.css.map": "/static/css/main.6e78ac8b.chunk.css.map",
+    "static/js/2.54a43ac4.chunk.js.LICENSE.txt": "/static/js/2.54a43ac4.chunk.js.LICENSE.txt",
+    "static/media/test1.md": "/static/media/test1.f63223c4.md",
+    "static/media/test2.md": "/static/media/test2.b93d4c5b.md",
+    "static/media/test3.md": "/static/media/test3.3ba1718e.md",
+    "static/media/test4.md": "/static/media/test4.58d238dd.md"
   },
   "entrypoints": [
-    "static/js/runtime-main.84975937.js",
-    "static/js/2.f1f9e5f2.chunk.js",
+    "static/js/runtime-main.47183366.js",
+    "static/js/2.54a43ac4.chunk.js",
     "static/css/main.6e78ac8b.chunk.css",
     "static/js/main.3a26ff54.chunk.js"
   ]
