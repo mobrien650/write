@@ -2,7 +2,7 @@
   "name": "writing-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mobrien.github.io/writing",
+  "homepage": "http://www.obwrites.com",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -12,6 +12,8 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
