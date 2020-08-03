@@ -8,13 +8,13 @@ import {
 
 import styled from 'styled-components';
 
-import Navigation from 'components/Navigation'
-
 import HomePage from 'pages/ui/HomePage'
 import StoryPage from 'pages/ui/StoryPage'
 
 import { COLORS } from 'styles/color';
 import { SPACING_DIMEN } from 'styles/dimen'
+
+import Shell from 'components/Shell'
 
 const Wrapper = styled.div`
   padding-left: ${SPACING_DIMEN.LARGE_PLUS};
@@ -34,12 +34,13 @@ function App() {
   return (
     <Router>
         <Wrapper>
-         <Content>
-            <Navigation />
-            <Switch>
-              <Route path="/" component={HomePage} exact/>
-              <Route path="/story/:name" component={StoryPage}/>
-            </Switch>
+          <Content>
+            <Shell storyList={[]}>
+              <Switch>
+                <Route path="/" component={HomePage} exact/>
+                <Route path="/story/:name" component={StoryPage}/>
+              </Switch>
+            </Shell>
           </Content>
         </Wrapper>
     </Router>

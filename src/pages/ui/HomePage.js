@@ -7,13 +7,7 @@ import BasePage from './BasePage';
 
 import HomeViewModel from '../logic/HomeViewModel'
 
-import Post from '../../components/Post';
-
-const Page = styled.div`
-    margin-left: ${SPACING_DIMEN.LARGE_PLUS};
-    margin-right: ${SPACING_DIMEN.LARGE_PLUS};
-    padding-top:  ${SPACING_DIMEN.LARGE_PLUS};
-`
+import Shell from '../../components/Shell';
 
 export default class HomePage extends BasePage {
     constructor(props) {
@@ -21,12 +15,6 @@ export default class HomePage extends BasePage {
     }
 
     render() {
-        return (
-            <Page>
-                {this.state.storyList.map((data, index) => {
-                    return <Post key={`post-list-${index}`} post={data} />
-                })}
-            </Page>
-        )
+        return null
     }
 }
