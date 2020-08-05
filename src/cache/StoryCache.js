@@ -32,7 +32,7 @@ class StoryCache {
         if(this.storyList == null) {
             let stories = null
             try {
-                stories = require(`../writings/api.json`)
+                stories = require(`../writings/writing_api.json`)
             } catch {
                 stories = { "data": [] }
             }
