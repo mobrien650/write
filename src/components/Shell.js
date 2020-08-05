@@ -4,12 +4,14 @@ import Aside from 'components/Aside';
 
 export default (props) => {
     return (
-        <div>
+        <React.Fragment>
             <Navigation />
-            <Aside storyList={props.storyList} />
             <main>
-                {props.children}
+                <Aside storyList={props.storyList} />
+                <section>
+                    {props.children}
+                </section>
             </main>
-        </div>
+        </React.Fragment>
     )
 }

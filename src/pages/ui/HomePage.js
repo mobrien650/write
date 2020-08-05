@@ -13,6 +13,11 @@ export default class HomePage extends BasePage {
     }
 
     render() {
-        return null
+        return (
+            <React.Fragment>
+                <h2>ALL ABOUT ME!!</h2>
+                <p>I am an amazing writer and will quit my day job to sell books for 99 cents.</p>
+            </React.Fragment>
+        )
     }
 }
