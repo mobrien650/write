@@ -11,7 +11,7 @@ export default class HomeViewModel extends BaseViewModel {
     }
 
     start() {        
-        this.tracker = new AnalyticsTracker()
+        this.tracker = new Tracker()
         this.tracker.visitPage()
     }
 }

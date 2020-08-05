@@ -1,5 +1,5 @@
 import BaseViewModel from 'pages/logic/BaseViewModel'
-import StoryTracker from 'pages/tracking/AnalyticsTracker'
+import Tracker from 'pages/tracking/AnalyticsTracker'
 
 import StoryCache from 'cache/StoryCache'
 
@@ -21,7 +21,7 @@ export default class HomeViewModel extends BaseViewModel {
     }
 
     start() {      
-        this.tracker = new AnalyticsTracker()
+        this.tracker = new Tracker()
 
         this.loadStory()
     }

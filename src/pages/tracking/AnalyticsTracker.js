@@ -1,6 +1,6 @@
 import Tracker, { CATEGORIES, DIMENSION } from './GATracker'
 
-export default class HomeTracker extends BaseTracker {
+export default class AnalyticsTracker {
     
     visitPage() {
         Tracker.trackPage()
