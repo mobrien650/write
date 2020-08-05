@@ -6,8 +6,6 @@ import BasePage from 'pages/ui/BasePage';
 
 import StoryViewModel from 'pages/logic/StoryViewModel'
 
-import { SPACING_DIMEN } from 'styles/dimen'
-
 const Wrapper = styled.div`
     margin-left: ${SPACING_DIMEN.LARGE_PLUS};
     margin-right: ${SPACING_DIMEN.LARGE_PLUS};
@@ -17,6 +15,10 @@ const Wrapper = styled.div`
 export default class StoryPage extends BasePage {
     constructor(props) {
         super(props, StoryViewModel)
+    }
+
+    componentWillReceiveProps(nextProp) {
+        this.viewModel.updateProps(nextProp)
     }
 
     render() {

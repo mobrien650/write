@@ -14,6 +14,15 @@ export default class BaseViewModel {
         return { }
     }
 
+    updateProps(props) {
+        this.props = props
+        this.onPropChange()
+    }
+
+    onPropChange() {
+
+    }
+
     newState(stateDelta) {
         return {
             ...this.state,

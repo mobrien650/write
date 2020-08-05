@@ -1,4 +1,5 @@
-import BaseViewModel from './BaseViewModel'
+import BaseViewModel from 'pages/logic/BaseViewModel'
+import StoryTracker from 'pages/tracking/AnalyticsTracker'
 
 import StoryCache from 'cache/StoryCache'
 
@@ -15,7 +16,20 @@ export default class HomeViewModel extends BaseViewModel {
         return this.props.match.params.name
     }
 
+    onPropChange() {
+        this.loadStory()
+    }
+
     start() {      
+        this.tracker = new AnalyticsTracker()
+
+        this.loadStory()
+    }
+
+    loadStory() {
+        this.tracker.visitPage()
+        this.tracker.startStory(this.getStoryName())
+
         StoryCache.fetchStory(this.getStoryName())
             .then(story => {
                 const newState = this.newState({

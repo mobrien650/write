@@ -1,4 +1,5 @@
 import BaseViewModel from 'pages/logic/BaseViewModel'
+import Tracker from 'pages/tracking/AnalyticsTracker'
 
 class HomeState {
 
@@ -10,6 +11,7 @@ export default class HomeViewModel extends BaseViewModel {
     }
 
     start() {        
-        // No - Op
+        this.tracker = new AnalyticsTracker()
+        this.tracker.visitPage()
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -29,7 +29,7 @@ export default class App extends BasePage {
       <Router>
         <Content className="content-wrapper">
           <Shell storyList={this.state.storyList}>
-            <Switch>
+            <Switch basename={process.env.PUBLIC_URL}>
               <Route path="/" component={HomePage} exact/>
               <Route path="/story/:name" component={StoryPage}/>
             </Switch>
