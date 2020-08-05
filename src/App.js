@@ -6,8 +6,6 @@ import {
   Route
 } from "react-router-dom";
 
-import styled from 'styled-components';
-
 import BasePage from 'pages/ui/BasePage'
 import HomePage from 'pages/ui/HomePage'
 import StoryPage from 'pages/ui/StoryPage'
@@ -15,8 +13,6 @@ import StoryPage from 'pages/ui/StoryPage'
 import ParentViewModel from 'pages/logic/ParentViewModel'
 
 import Shell from 'components/Shell'
-
-const Content = styled.div``;
 
 export default class App extends BasePage {
 
@@ -27,14 +23,14 @@ export default class App extends BasePage {
   render() {
     return (
       <Router>
-        <Content className="content-wrapper">
+        <div className="content-wrapper">
           <Shell storyList={this.state.storyList}>
             <Switch basename={process.env.PUBLIC_URL}>
               <Route path="/" component={HomePage} exact/>
               <Route path="/story/:name" component={StoryPage}/>
             </Switch>
           </Shell>
-        </Content>
+        </div>
       </Router>
     );
   }

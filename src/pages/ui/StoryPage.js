@@ -1,12 +1,9 @@
 import React from 'react';
-import styled from 'styled-components'
 import ReactMarkdown from 'react-markdown'
 
 import BasePage from 'pages/ui/BasePage';
 
 import StoryViewModel from 'pages/logic/StoryViewModel'
-
-const Wrapper = styled.div``
 
 export default class StoryPage extends BasePage {
     constructor(props) {
@@ -19,9 +16,9 @@ export default class StoryPage extends BasePage {
 
     render() {
         return (
-            <Wrapper>
+            <div>
                 <ReactMarkdown source={this.state.story}/>
-            </Wrapper>
+            </div>
         )
     }
 }
