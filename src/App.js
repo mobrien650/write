@@ -10,7 +10,7 @@ import BasePage from 'pages/ui/BasePage'
 import HomePage from 'pages/ui/HomePage'
 import StoryPage from 'pages/ui/StoryPage'
 
-import ParentViewModel from 'pages/logic/ParentViewModel'
+import ParentViewModel from 'pages/logic/DrawerViewModel'
 
 import Shell from 'components/Shell'
 
@@ -24,10 +24,10 @@ export default class App extends BasePage {
     return (
       <Router>
         <div className="content-wrapper">
-          <Shell storyList={this.state.storyList}>
+          <Shell model={this.state}>
             <Switch basename={process.env.PUBLIC_URL}>
               <Route path="/" component={HomePage} exact/>
-              <Route path="/story/:name" component={StoryPage}/>
+              <Route path="/:type/:name" component={StoryPage}/>
             </Switch>
           </Shell>
         </div>

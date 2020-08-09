@@ -12,9 +12,9 @@ class StoryCache {
 
             let story = null
             try {
-                story = require(`../writings/${storyName}.md`)
+                story = require(`../writings/story/${storyName}.md`)
             } catch {
-                return complete(null)
+                return complete(`Could not find ${storyName}`)
             }
 
             return fetch(story)

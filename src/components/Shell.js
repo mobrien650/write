@@ -5,13 +5,14 @@ import Aside from 'components/Aside';
 import SideNav from 'components/SideNav';
 
 export default (props) => {
+
     return (
         <React.Fragment>
             <Header />
-            <SideNav>
+            <SideNav model={props.model}>
                 {props.children}
             </SideNav>
-            <Aside storyList={props.storyList} id="stories-list"/>
+            <Aside model={props.model}/>
             <main>
                 <section>
                     {props.children}

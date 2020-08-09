@@ -10,14 +10,16 @@ export default class StoryPage extends BasePage {
         super(props, StoryViewModel)
     }
 
-    componentWillReceiveProps(nextProp) {
-        this.viewModel.updateProps(nextProp)
+    componentDidUpdate(prevProps) {
+        if(this.props !== prevProps) {
+            this.viewModel.updateProps(this.props)
+        }
     }
 
     render() {
         return (
             <article>
-                <ReactMarkdown source={this.state.story}/>
+                <ReactMarkdown escapeHtml={false} source={this.state.story}/>
             </article>
         )
     }

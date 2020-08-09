@@ -1,15 +1,17 @@
 import React from 'react';
-import Post from 'components/Post';
+import DrawerItem from 'components/DrawerItem';
 
-import { Link } from "react-router-dom";
+function getClasses(model) {
+    return model.expanded ? 'expanded' : ''
+}
 
 export default (props) => {
     return (
-        <aside id={props.id}>
+        <aside className={getClasses(props.model)} id="stories-list">
             <div>
                 <ul>
-                    {props.storyList.map((data, index) => {
-                        return <Post key={`post-list-${index}`} post={data} />
+                    {props.model.listItems.map((data, index) => {
+                        return <DrawerItem key={`post-list-${index}`} post={data} path={props.model.type} toggle={() => props.model.toggleDrawer(props.model.type)} />
                     })}
                 </ul>
             </div>
