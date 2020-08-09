@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import AnimatedHeader from 'components/AnimatedHeader'
+import Break from 'components/Break'
 
 export default (props) => {
     return (
@@ -11,6 +11,7 @@ export default (props) => {
                     <AnimatedHeader title="OBwrites" letterDelay={150} split={2} splitDelay={400} blinkCount={15} />
                 </div>
             </nav>
+            <Break />
         </header>
     )
 }
