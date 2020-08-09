@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.b31a4f5e.chunk.css",
-    "main.js": "/static/js/main.ceb7a12f.chunk.js",
-    "main.js.map": "/static/js/main.ceb7a12f.chunk.js.map",
+    "main.css": "/static/css/main.fa265bc2.chunk.css",
+    "main.js": "/static/js/main.fa8f6b11.chunk.js",
+    "main.js.map": "/static/js/main.fa8f6b11.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.47183366.js",
     "runtime-main.js.map": "/static/js/runtime-main.47183366.js.map",
-    "static/js/2.eaa3118b.chunk.js": "/static/js/2.eaa3118b.chunk.js",
-    "static/js/2.eaa3118b.chunk.js.map": "/static/js/2.eaa3118b.chunk.js.map",
+    "static/js/2.c01defbb.chunk.js": "/static/js/2.c01defbb.chunk.js",
+    "static/js/2.c01defbb.chunk.js.map": "/static/js/2.c01defbb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6fe82d160afc4f06e0a15594fc6dec29.js": "/precache-manifest.6fe82d160afc4f06e0a15594fc6dec29.js",
+    "precache-manifest.0b4bba0d96297dab928a5e6a2f135fed.js": "/precache-manifest.0b4bba0d96297dab928a5e6a2f135fed.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.b31a4f5e.chunk.css.map": "/static/css/main.b31a4f5e.chunk.css.map",
-    "static/js/2.eaa3118b.chunk.js.LICENSE.txt": "/static/js/2.eaa3118b.chunk.js.LICENSE.txt",
-    "static/media/test1.md": "/static/media/test1.f63223c4.md",
+    "static/css/main.fa265bc2.chunk.css.map": "/static/css/main.fa265bc2.chunk.css.map",
+    "static/js/2.c01defbb.chunk.js.LICENSE.txt": "/static/js/2.c01defbb.chunk.js.LICENSE.txt",
+    "static/media/2020_Aug_9.md": "/static/media/2020_Aug_9.b868424b.md",
+    "static/media/test1.md": "/static/media/test1.305d17cf.md",
     "static/media/test2.md": "/static/media/test2.b93d4c5b.md",
     "static/media/test3.md": "/static/media/test3.3ba1718e.md",
-    "static/media/test4.md": "/static/media/test4.58d238dd.md"
+    "static/media/test4.md": "/static/media/test4.58d238dd.md",
+    "static/media/toa-heftiba-DakDfhDHMSA-unsplash.jpg": "/static/media/toa-heftiba-DakDfhDHMSA-unsplash.9f714545.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.47183366.js",
-    "static/js/2.eaa3118b.chunk.js",
-    "static/css/main.b31a4f5e.chunk.css",
-    "static/js/main.ceb7a12f.chunk.js"
+    "static/js/2.c01defbb.chunk.js",
+    "static/css/main.fa265bc2.chunk.css",
+    "static/js/main.fa8f6b11.chunk.js"
   ]
 }
