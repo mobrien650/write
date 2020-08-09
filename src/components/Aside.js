@@ -7,7 +7,6 @@ export default (props) => {
     return (
         <aside id={props.id}>
             <div>
-                <Link to={`/`}>My Bio</Link>
                 <ul>
                     {props.storyList.map((data, index) => {
                         return <Post key={`post-list-${index}`} post={data} />

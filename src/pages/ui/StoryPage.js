@@ -16,9 +16,9 @@ export default class StoryPage extends BasePage {
 
     render() {
         return (
-            <div>
+            <article>
                 <ReactMarkdown source={this.state.story}/>
-            </div>
+            </article>
         )
     }
 }

@@ -1,17 +1,16 @@
 import React from 'react';
-import Navigation from 'components/Navigation';
-import Aside from 'components/Aside';
 
-function storiesListToggle() {
-    const element = document.getElementById("stories-list");
-    element.classList.toggle("expanded");
-  } 
+import Header from 'components/Header';
+import Aside from 'components/Aside';
+import SideNav from 'components/SideNav';
 
 export default (props) => {
     return (
         <React.Fragment>
-            <Navigation />
-            <button class="toggle" id="stories-list-toggle" onClick={storiesListToggle}>Stories</button>
+            <Header />
+            <SideNav>
+                {props.children}
+            </SideNav>
             <Aside storyList={props.storyList} id="stories-list"/>
             <main>
                 <section>

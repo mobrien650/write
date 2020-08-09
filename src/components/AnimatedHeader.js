@@ -65,8 +65,10 @@ export default class AnimatedHeader extends Component {
     render() {
        return (
         <React.Fragment>
-            <span>{this.state.value.length < this.getSplit() ? this.state.value.substring(0, this.state.value.length) : this.state.value.substring(0, this.getSplit())}</span>
-            <span className={this.state.class}>{this.state.value.length >= this.getSplit() ? this.state.value.substring(this.getSplit(), this.state.value.length) : ''}</span>
+            <span className={this.state.class}>
+                <span>{this.state.value.length < this.getSplit() ? this.state.value.substring(0, this.state.value.length) : this.state.value.substring(0, this.getSplit())}</span>
+                <span>{this.state.value.length >= this.getSplit() ? this.state.value.substring(this.getSplit(), this.state.value.length) : ''}</span>
+            </span>
         </React.Fragment>
        )
     }
