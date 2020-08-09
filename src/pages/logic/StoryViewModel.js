@@ -4,7 +4,7 @@ import Tracker from 'pages/tracking/AnalyticsTracker'
 import StoryCache from 'cache/StoryCache'
 import BlogCache from 'cache/BlogCache'
 
-import { TEXT_TYPE } from 'pages/logic/DrawerViewModel'
+import TEXT_TYPE from 'pages/MediaTypes'
 
 class StoryState {
     story = null

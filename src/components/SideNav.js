@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { TEXT_TYPE } from 'pages/logic/DrawerViewModel'
+import TEXT_TYPE from 'pages/MediaTypes'
 
 function getClasses(model) {
     return ['side-nav', model.expanded ? 'expanded icons' : ''].join(' ')

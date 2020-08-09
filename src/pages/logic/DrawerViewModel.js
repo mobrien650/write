@@ -3,10 +3,7 @@ import BaseViewModel from 'pages/logic/BaseViewModel'
 import StoryCache from 'cache/StoryCache'
 import BlogCache from 'cache/BlogCache'
 
-export const TEXT_TYPE = {
-    STORY: 'story',
-    BLOG: 'blog'
-}
+import TEXT_TYPE from 'pages/MediaTypes'
 
 class DrawerState {
     listItems = []
@@ -54,9 +51,9 @@ export default class DrawerViewModel extends BaseViewModel {
     }
 
     getListItems(type) {
-        if(type === "story") {
+        if(type === TEXT_TYPE.STORY) {
             return StoryCache.getStoryList()
-        } else if(type === "blog") {
+        } else if(type === TEXT_TYPE.BLOG) {
             return BlogCache.getBlogList()
         } else { 
             return []

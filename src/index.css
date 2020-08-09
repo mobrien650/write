@@ -9,7 +9,7 @@
   --transparent: rgba(0, 0, 0, 0.0);
   --grey: #C9DBDF;
 
-  --side-bar: rgba(237, 244, 242,.95);
+  --side-bar: rgba(218, 227, 231, 0.9)
 }
 
 body {
@@ -35,7 +35,7 @@ p, span {
 }
 
 a {
-  color: var(--primary-medium);
+  color: var(--black);
 }
 
 a:hover {
@@ -201,6 +201,8 @@ aside ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+  text-align: center;
 }
 
 aside a {
@@ -214,9 +216,21 @@ aside a.active, aside a:hover {
   color: White;
 }
 
+.list-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
 article {
   margin: 0 auto;
   max-width: 680px;
+}
+
+.nav-title {
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--black);
 }
 
 section {
