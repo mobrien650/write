@@ -14,6 +14,8 @@ class DrawerState {
     toggleDrawer = null
     closeDrawer = null
     expanded = false
+    storyCount = 0
+    blogCount = 0
 }
 
 export default class DrawerViewModel extends BaseViewModel {
@@ -23,7 +25,10 @@ export default class DrawerViewModel extends BaseViewModel {
 
     start() {        
         const newState = this.newState({
-            toggleDrawer: this.toggleDrawer
+            storyCount: StoryCache.getStoryList().length,
+            blogCount: BlogCache.getBlogList().length,
+            toggleDrawer: this.toggleDrawer,
+            closeDrawer: this.closeDrawer
         }) 
         
         this.setState(newState)
@@ -32,9 +37,6 @@ export default class DrawerViewModel extends BaseViewModel {
     toggleDrawer = (type) => {
         const safeType = type || this.state.type
         
-        console.log('safe', safeType)
-        console.log('state', this.state.type)
-
         // If the drawer is open for stories and they user selected blogs, keep the drawer open
         const expanded = (this.state.expanded && this.state.type !== safeType) ? true : !this.state.expanded
 

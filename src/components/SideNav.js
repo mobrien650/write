@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { TEXT_TYPE } from 'pages/logic/DrawerViewModel'
 
 function getClasses(model) {
-    return ['side-nav', model.expanded ? 'expanded' : ''].join(' ')
+    return ['side-nav', model.expanded ? 'expanded icons' : ''].join(' ')
 }
 
 export default (props) => {
@@ -16,19 +16,19 @@ export default (props) => {
                 <path d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"></path>
                 </svg>
             </Link>
-            <button onClick={() => props.model.toggleDrawer(TEXT_TYPE.STORY)}>
+            {props.model.storyCount > 0 && <button onClick={() => props.model.toggleDrawer(TEXT_TYPE.STORY)}>
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
                 <title>stories</title>
                 <path d="M28 4v26h-21c-1.657 0-3-1.343-3-3s1.343-3 3-3h19v-24h-20c-2.2 0-4 1.8-4 4v24c0 2.2 1.8 4 4 4h24v-28h-2z"></path>
                 <path d="M7.002 26v0c-0.001 0-0.001 0-0.002 0-0.552 0-1 0.448-1 1s0.448 1 1 1c0.001 0 0.001-0 0.002-0v0h18.997v-2h-18.997z"></path>
                 </svg>
-            </button>
-            <button onClick={() => props.model.toggleDrawer(TEXT_TYPE.BLOG)}>
+            </button>}
+            {props.model.blogCount > 0 && <button onClick={() => props.model.toggleDrawer(TEXT_TYPE.BLOG)}>
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
                 <title>blog</title>
                 <path d="M27 0h-24c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h24c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM26 28h-22v-24h22v24zM8 14h14v2h-14zM8 18h14v2h-14zM8 22h14v2h-14zM8 10h14v2h-14z"></path>
                 </svg>
-            </button>
+            </button>}
             <a href="https://www.twitter.com/obwrites" target="_blank" rel="noopener noreferrer">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
                     <title>twitter</title>
@@ -38,3 +38,4 @@ export default (props) => {
         </nav>
     )
 }
+

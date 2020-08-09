@@ -9,10 +9,10 @@ export default (props) => {
     return (
         <React.Fragment>
             <Header />
+            <Aside model={props.model}/>
             <SideNav model={props.model}>
                 {props.children}
             </SideNav>
-            <Aside model={props.model}/>
             <main>
                 <section>
                     {props.children}
