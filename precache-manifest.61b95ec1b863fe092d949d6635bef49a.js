@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "004e7d2235ddd38d9f7388e70ffd75bb",
+    "revision": "2d654192282fb1751badbfae7e7fae2e",
     "url": "/index.html"
   },
   {
-    "revision": "768136f2f1361dc096aa",
-    "url": "/static/css/main.6ccc91a4.chunk.css"
+    "revision": "74d3772695fc60480974",
+    "url": "/static/css/main.0833e83d.chunk.css"
   },
   {
     "revision": "7ab88748a68fac92f3c5",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.c01defbb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "768136f2f1361dc096aa",
-    "url": "/static/js/main.5c8357f2.chunk.js"
+    "revision": "74d3772695fc60480974",
+    "url": "/static/js/main.b367efbc.chunk.js"
   },
   {
     "revision": "6ec113772b89c2118f01",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b868424bd6e5a69303a1ea64d5340db3",
     "url": "/static/media/2020_Aug_9.b868424b.md"
+  },
+  {
+    "revision": "25fb52ad13f7883cb7760ff42cab9338",
+    "url": "/static/media/books-white.25fb52ad.png"
   },
   {
     "revision": "305d17cf028055d1bbda26b8cf9d2c45",
@@ -42,9 +46,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "58d238dd12e6445cdbabf6ccdf55f3ca",
     "url": "/static/media/test4.58d238dd.md"
-  },
-  {
-    "revision": "9f7145453a28ffd6fc2ec5d578cd1b44",
-    "url": "/static/media/toa-heftiba-DakDfhDHMSA-unsplash.9f714545.jpg"
   }
 ]);
