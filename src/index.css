@@ -285,6 +285,10 @@ main footer {
   text-align: center;
 }
 
+.hero-image {
+  border-radius: 12px;
+}
+
 @media (min-width: 768px) { 
   .hero {
     flex-wrap: nowrap;

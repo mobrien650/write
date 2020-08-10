@@ -5,7 +5,7 @@ import HomeViewModel from 'pages/logic/HomeViewModel'
 
 import Break from '../../components/Break';
 
-import HeroImage from '../../assets/images/toa-heftiba-DakDfhDHMSA-unsplash.jpg';
+import HeroImage from '../../assets/images/books-white.png';
 
 export default class HomePage extends BasePage {
     constructor(props) {
@@ -17,7 +17,7 @@ export default class HomePage extends BasePage {
             <React.Fragment>
                 <div className="hero">
                     <div className="hero-left">
-                        <img alt="" src={HeroImage} />
+                        <img className="hero-image" alt="" src={HeroImage} />
                     </div>
                     <div className="hero-right">
                         <h2>ALL ABOUT ME!!</h2>
