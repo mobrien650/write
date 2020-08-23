@@ -351,6 +351,16 @@ main footer {
   max-width: 200px;
 }
 
+.Story p:first-of-type:first-letter {
+  font-size: 4.5rem;
+  float: left;
+  margin: .4rem .2rem 0 -.2rem;
+}
+
+.Story p:not(:first-of-type) {
+  text-indent: 2.5rem;
+}
+
 @media (min-width: 768px) { 
   .hero {
     display: flex;
