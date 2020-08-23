@@ -2,18 +2,21 @@
 :root {
   --primary: #B6C7CE;
   --primary-medium: #628493;
-  --secondary: #935B43;
+  --secondary: #C16C48;
   --white: #FBFDFE;
   --off-white: #ECDEC2;
   --black: #013045;
   --transparent: rgba(0, 0, 0, 0.0);
   --grey: #C9DBDF;
 
-  --side-bar: rgba(218, 227, 231, 0.9)
+  --side-bar: rgba(218, 227, 231, 0.9);
+
+  --spacing: 2.25rem;
 }
 
 body {
   background: var(--white);
+  color: var(--black);
   margin: 0;
   font-family: 'Mulish', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,20 +29,60 @@ body * {
 
 h1, h2, h3, h4, h5, h6, .monospace {
   font-family: 'Roboto Mono', monospace;
+  font-size: 2rem;
   margin-top: 0;
-  color: var(--black);
 }
 
-p, span {
-  color: var(--black);
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+h6 {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
 }
 
 a {
+  background: rgba(0,0,0,.05);
   color: var(--black);
+  font-style: italic;
+  text-decoration: none;
 }
 
 a:hover {
   color: var(--secondary);
+}
+
+.date {
+  color: rgba(var(--black), .8);
+  font-size: .75rem;
+}
+
+.news {
+  font-style: italic;
+  margin-left: 16px;
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  margin-top: 1rem;
 }
 
 img {
@@ -50,6 +93,10 @@ img {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.center {
+  text-align: center;
 }
 
 .break-line {
@@ -82,6 +129,10 @@ section .break-line {
   bottom: -.75rem;
 }
 
+header {
+  margin: 0 var(--spacing);
+}
+
 header .main-nav {
   display: flex;
   align-items: center;
@@ -90,8 +141,10 @@ header .main-nav {
   margin: 1rem;
 }
 
-
-
+nav a {
+  background: none;
+  font-style: normal;
+}
 
 .logo {
   color: var(--black);
@@ -197,6 +250,10 @@ aside#stories-list > div {
   width: 200px;
 }
 
+aside nav {
+  width: 100%;
+}
+
 aside ul {
   list-style-type: none;
   margin: 0;
@@ -235,12 +292,12 @@ article {
 
 section {
   flex-grow: 1;
-  padding: 0 1rem 0 2.25rem;
+  padding: 0 var(--spacing);
 }
 
 section section {
-  margin: 0 -1rem 0 -2.25rem;
-  padding: 1rem 1rem 1rem 2.25rem;
+  margin: 0 calc(var(--spacing) * -1);
+  padding: 1rem var(--spacing);
 }
 
 section section:nth-child(odd) {
@@ -249,7 +306,7 @@ section section:nth-child(odd) {
 
 main footer {
   font-size: 12px;
-  margin: 1em 2.25rem;
+  margin: 1rem var(--spacing);
   opacity: .9;
   text-align: center;
 }
@@ -259,48 +316,80 @@ main footer {
 
 .hero {
   background: var(--grey);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-left: -2.25rem;
-  margin-right: -1rem;
+  margin-left: calc(var(--spacing) * -1);
+  margin-right: calc(var(--spacing) * -1);
 }
 
 .hero div {
   box-sizing: border-box;
-  display: inline-block;
-  max-height: 100vw;
-  padding: 10vw;
-  width: 100%;
-  flex-basis: 100%;
-}
-
-.hero img {
-  max-height: 70vw;
-  width: auto;
+  padding: var(--spacing);
 }
 
 .hero-left {
-  background: var(--off-white);
-  text-align: center;
+  background: linear-gradient(180deg, rgba(128,128,128, 0.5), rgba(200, 200, 200, 0.5)), url(./assets/images/backing-left.png) no-repeat center / cover;
+  height: 100vw;
+  max-height: 365px;
+  padding: 0;
+  width: 100vw;
 }
 
-.hero-image {
-  border-radius: 12px;
+.hero-right > h2, .hero-right > h3 {
+  margin: .2rem;
+}
+
+.Panel > div {
+  margin: var(--spacing) auto;
+  max-width: 980px;
+}
+
+.Panel .Split {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.Panel .Split img {
+  max-width: 200px;
 }
 
 @media (min-width: 768px) { 
   .hero {
-    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
   }
+  
   .hero div {
-    max-height: 50vw;
-    width: 50%;
-    flex-basis: 50%;
+    display: inline-block;
+    flex: 0 0 50%;
+    padding: 4.5rem;
   }
-  .hero img {
-    max-height: 30vw;
-    width: auto;
-    flex-basis: 30%;
+  
+  .hero-left {
+    align-self: stretch;;
+  }
+
+
+  .Panel .Split {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .Panel .Split > div:first-of-type {
+    flex: 0 0 70%;
+  }
+
+  .Panel .Split > div:last-of-type {
+    flex: 0 0 30%;
+  }
+
+  .Panel .Split.Flip > div:first-of-type {
+    flex: 0 0 30%;
+  }
+  .Panel .Split.Flip > div:last-of-type {
+    flex: 0 0 70%;
+  }
+
+  .Panel .Split img {
+    max-width: 150px;
   }
 }

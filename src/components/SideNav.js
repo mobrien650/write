@@ -10,12 +10,12 @@ function getClasses(model) {
 export default (props) => {
     return (
         <nav className={getClasses(props.model)}>
-            <Link to="/" id="home-link" onClick={props.model.closeDrawer}>
+            {(props.model.storyCount > 0 || props.model.blogCount > 0) && <Link to="/" id="home-link" onClick={props.model.closeDrawer}>
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
                 <title>home</title>
                 <path d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"></path>
                 </svg>
-            </Link>
+            </Link>}
             {props.model.storyCount > 0 && <button onClick={() => props.model.toggleDrawer(TEXT_TYPE.STORY)}>
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
                 <title>stories</title>

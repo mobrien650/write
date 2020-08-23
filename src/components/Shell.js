@@ -8,12 +8,12 @@ export default (props) => {
 
     return (
         <React.Fragment>
-            <Header />
+            <Header model={props.model} />
             <Aside model={props.model}/>
             <SideNav model={props.model}>
                 {props.children}
             </SideNav>
-            <main>
+            <main onClick={props.model.closeDrawer}>
                 <section>
                     {props.children}
                 </section>

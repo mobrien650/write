@@ -1,4 +1,4 @@
-import Tracker, { CATEGORIES, DIMENSION } from './GATracker'
+import Tracker, { CATEGORIES } from './GATracker'
 
 export default class AnalyticsTracker {
     

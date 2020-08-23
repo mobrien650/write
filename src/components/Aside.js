@@ -19,12 +19,14 @@ export default (props) => {
     return (
         <aside className={getClasses(props.model)} id="stories-list">
             <div className="list-container">
-                <h3 class="nav-title">{getTitle(props.model)}</h3>
-                <ul>
-                    {props.model.listItems.map((data, index) => {
-                        return <DrawerItem key={`post-list-${index}`} post={data} path={props.model.type} toggle={() => props.model.toggleDrawer(props.model.type)} />
-                    })}
-                </ul>
+                <h3 className="nav-title">{getTitle(props.model)}</h3>
+                <nav>
+                    <ul>
+                        {props.model.listItems.map((data, index) => {
+                            return <DrawerItem key={`post-list-${index}`} post={data} path={props.model.type} toggle={() => props.model.toggleDrawer(props.model.type)} />
+                        })}
+                    </ul>
+                </nav>
             </div>
         </aside>
     )

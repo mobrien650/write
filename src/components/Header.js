@@ -5,7 +5,7 @@ import Break from 'components/Break'
 
 export default (props) => {
     return (
-        <header>
+        <header onClick={props.model.onClick}>
             <nav className="main-nav">
                 <div className="logo monospaced">
                     <AnimatedHeader title="OBwrites" letterDelay={150} split={2} splitDelay={400} blinkCount={15} />

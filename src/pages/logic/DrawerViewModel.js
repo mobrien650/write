@@ -25,7 +25,8 @@ export default class DrawerViewModel extends BaseViewModel {
             storyCount: StoryCache.getStoryList().length,
             blogCount: BlogCache.getBlogList().length,
             toggleDrawer: this.toggleDrawer,
-            closeDrawer: this.closeDrawer
+            closeDrawer: this.closeDrawer,
+            openDrawer: this.openDrawer
         }) 
         
         this.setState(newState)
@@ -41,6 +42,16 @@ export default class DrawerViewModel extends BaseViewModel {
             expanded: expanded,
             type: safeType,
             listItems: this.getListItems(safeType)
+        })
+    }
+
+    openDrawer = () => {
+        const type = TEXT_TYPE.STORY
+
+        this.setState({
+        expanded: true,
+        type: type,
+        listItems: this.getListItems(type)
         })
     }
 
