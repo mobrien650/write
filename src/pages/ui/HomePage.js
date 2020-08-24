@@ -27,14 +27,12 @@ export default class HomePage extends BasePage {
         return (
             <React.Fragment>
                 <div className="hero">
-                    <div className="hero-left">
-                        {/* <img className="hero-image" alt="" src={HeroImage} /> */}
-                    </div>
+                    <div className="hero-left"/>
                     <div className="hero-right">
                         <h1>WELCOME</h1>
                         <h2>I'm ME O'Brien</h2>
                         <h3>Fiction Writer | Always Learning</h3>
-                        <p>Read my work: <Link to="/" onClick={e => this.openDrawer(e)}>Stories</Link></p>
+                        <p>Read my <Link to="/" onClick={e => this.openDrawer(e)}>Short Stories</Link></p>
                     </div>
                 </div>
                 <section className="Panel">
@@ -58,7 +56,7 @@ export default class HomePage extends BasePage {
                 <section className="Panel"s>
                     <div>
                     <div className="Split Flip">
-                            <div className="center"><img src={Books} alt=""/></div>
+                            <div className="center space"><img src={Books} alt=""/></div>
                             <div>
                                 <p>Check my short stories section, I'm always adding new short stories for you to read.</p>
                                 <p>You can contact me at abc@123.com</p>

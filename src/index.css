@@ -99,6 +99,10 @@ code {
   text-align: center;
 }
 
+.space {
+  margin-top: var(--spacing);
+}
+
 .break-line {
   background: var(--primary);
   height: 2px;
@@ -326,7 +330,7 @@ main footer {
 }
 
 .hero-left {
-  background: linear-gradient(180deg, rgba(128,128,128, 0.5), rgba(200, 200, 200, 0.5)), url(./assets/images/backing-left.png) no-repeat center / cover;
+  background: linear-gradient(180deg, rgba(128, 128, 128, 0.5), rgba(225, 225, 225, 0.5)), url(./assets/images/backing-left.png) no-repeat center / cover;
   height: 100vw;
   max-height: 365px;
   padding: 0;
@@ -351,6 +355,10 @@ main footer {
   max-width: 200px;
 }
 
+.Story {
+  margin-bottom: var(--spacing);
+}
+
 .Story p:first-of-type:first-letter {
   font-size: 4.5rem;
   float: left;
@@ -362,6 +370,11 @@ main footer {
 }
 
 @media (min-width: 768px) { 
+
+  .space {
+    margin-top: 0;
+  }
+
   .hero {
     display: flex;
     align-items: center;
